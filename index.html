@@ -1,38 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Puzzle Slide</title>
-  <style>
-    #puzzle-container {
-      width: 80%;
-      height: 80vh;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 5px;
-      margin: 0 auto;
-    }
-
-    .puzzle-block {
-      background: #66cdaa;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2em;
-    }
-
-    #timer {
-      font-size: 1.5em;
-      text-align: center;
-    }
-  </style>
+  <title>数字あてゲーム</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>たのしいよね？</h1>
-  <p id="timer">Time: 0 seconds</p>
-  <div id="puzzle-container"></div>
-
-  <script src="app.js"></script>
-  
+  <h1>数字あてゲーム</h1>
+  <p>1~100のランダムな数字をあててね</p>
+  <input type="number" id="guess" min="1" max="100">
+  <button onclick="checkGuess()">これにきめた！</button>
+  <p id="message"></p>
+  <script src="game.js"></script>
 </body>
 </html>
